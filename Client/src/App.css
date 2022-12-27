@@ -1,0 +1,71 @@
+.Container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, #E5F5F5 4%, rgba(137, 230, 249, 1) 100%);
+  background: url('.//testando.jpg');
+  background-size: cover;
+  background-position: left;
+}
+
+
+.Container .form-container {
+  /* border: 2px solid black; */
+  height: 70%;
+  width: 30%;
+  padding: 5%;
+  border-radius: 20px;
+  -webkit-box-shadow: 11px 11px 22px -3px rgba(0, 0, 0, 0.44);
+  -moz-box-shadow: 11px 11px 22px -3px rgba(0, 0, 0, 0.44);
+  box-shadow: 11px 11px 22px -3px rgba(0, 0, 0, 0.44);
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.Container .form-container .form-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Container .form-container .register-form {
+  height: 100%;
+  justify-content: flex-start;
+  /* margin-top: 25%;  */
+}
+
+.Container .form-container .register-form {
+  flex-direction: column;
+}
+
+.Container .form-container .register-form .input-container {
+  margin: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: 2px solid black; */
+  padding: 2%;
+  border-radius: 30px;
+  background-color: #535063;
+}
+
+.Container .form-container .register-form .input-container .icon {
+  margin-right: 3px;
+  /* color: grey; */
+}
+
+.Container .form-container .register-form .input-container .register-input {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  border: none;
+  padding: 20px;
+  outline: none;
+  border-radius: 20px;
+  background-color: #535063;
+}
