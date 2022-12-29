@@ -11,6 +11,10 @@
   background-position: left;
 }
 
+.register-title {
+  font-weight: 800;
+  text-transform: uppercase;
+}
 
 .Container .form-container {
   /* border: 2px solid black; */
@@ -52,10 +56,14 @@
   padding: 2%;
   border-radius: 30px;
   background-color: #535063;
+  -webkit-box-shadow: 24px 43px 53px -24px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 24px 43px 53px -24px rgba(0, 0, 0, 0.26);
+  box-shadow: 24px 43px 53px -24px rgba(0, 0, 0, 0.26);
 }
 
 .Container .form-container .register-form .input-container .icon {
-  margin-right: 3px;
+  margin: 0px 3px 0px 3px;
+  height: 20px;
   /* color: grey; */
 }
 
@@ -68,4 +76,41 @@
   outline: none;
   border-radius: 20px;
   background-color: #535063;
+  color: #a4a2a2;
 }
+
+
+.Container .form-container .register-form .input-container .register-input::placeholder {
+  color: #a4a2a2;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.Container .form-container .register-form .button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 17%;
+}
+
+.Container .form-container .register-form .register-button {
+  background: none;
+  height: 50px;
+  width: 150px;
+  border-radius: 20px;
+  color: #a4a2a2;
+  background: #3C3956;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-box-shadow: 24px 43px 53px -24px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 24px 43px 53px -24px rgba(0, 0, 0, 0.26);
+  box-shadow: 24px 43px 53px -24px rgba(0, 0, 0, 0.26);
+  transition: all 0.5s;
+}
+
+.Container .form-container .register-form .register-button:hover {
+  transform: scale(1.2);
+  font-size: 17px;
+}
+
