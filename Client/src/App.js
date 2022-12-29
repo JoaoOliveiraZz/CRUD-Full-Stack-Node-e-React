@@ -3,6 +3,7 @@ import './App.css';
 import { FaUserAlt } from 'react-icons/fa';
 import { MdEmail, MdPassword } from 'react-icons/md';
 import React, { useState } from 'react';
+import Axios from 'axios';
 
 
 function App() {
@@ -10,21 +11,31 @@ function App() {
   const [values, setValues] = useState();
 
   const changeValues = (value) => {
-      setValues((prevValue) => (
-        {
-          ...prevValue,
-          [value.target.name]: value.target.value,
-        }
-      ));
+    setValues((prevValue) => (
+      {
+        ...prevValue,
+        [value.target.name]: value.target.value,
+      }
+    ));
   }
-  
+
+  const makeSignup = () => {
+    Axios.post("http://localhost:3001/register", {
+      name: values.Nome,
+      email: values.Email,
+      senha: values.Senha,
+    })
+  }
+
+
+
   return (
     <div className="Container">
       <div className='form-container'>
         <div className='form-header'>
           <h1 className='register-title'>Sign up</h1>
         </div>
-        <form className='register-form'>
+        <form className='register-form' onSubmit={e => { e.preventDefault(); }}>
           <div className='input-container input-selected'>
             <FaUserAlt className='icon' />
             <input placeholder='Nome' type='text' name='Nome' className='register-input' id='input1' onChange={changeValues}></input>
@@ -38,7 +49,7 @@ function App() {
             <input type='password' name='Senha' className='register-input' placeholder='Senha' onChange={changeValues}></input>
           </div>
           <div className='button-container'>
-            <button className='register-button' onClick={console.log(values)}>SignUp</button>
+            <button className='register-button' onClick={makeSignup}>SignUp</button>
           </div>
         </form>
       </div>

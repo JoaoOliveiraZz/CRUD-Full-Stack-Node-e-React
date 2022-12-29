@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS `Usuario`(
+    `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `Nome` VARCHAR(255),
+    `Email` VARCHAR(255),
+    `Senha` VARCHAR(255)
+);
