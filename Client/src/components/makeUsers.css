@@ -6,7 +6,7 @@
   justify-content: center;
   background: rgb(255, 255, 255);
   background: linear-gradient(90deg, #E5F5F5 4%, rgba(137, 230, 249, 1) 100%);
-  background: url('.//testando.jpg');
+  background: #535063;
   background-size: cover;
   background-position: left;
 }
@@ -32,8 +32,13 @@
 
 .Container .form-container .form-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+.Container .form-container .form-header .register-description{
+  font-weight: 500;
+  border-bottom: 2px solid #a4a2a2;
 }
 
 .Container .form-container .register-form {
@@ -44,6 +49,8 @@
 
 .Container .form-container .register-form {
   flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
 .Container .form-container .register-form .input-container {
@@ -59,6 +66,11 @@
   -webkit-box-shadow: 24px 43px 53px -24px rgba(0, 0, 0, 0.26);
   -moz-box-shadow: 24px 43px 53px -24px rgba(0, 0, 0, 0.26);
   box-shadow: 24px 43px 53px -24px rgba(0, 0, 0, 0.26);
+  transition: all 1.5s;
+}
+
+.Container .form-container .register-form .input-container:hover{
+  transform: scale(1.2);  
 }
 
 .Container .form-container .register-form .input-container .icon {

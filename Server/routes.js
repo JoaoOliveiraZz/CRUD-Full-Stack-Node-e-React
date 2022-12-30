@@ -12,18 +12,25 @@ const db = mysql.createPool({
 })
 
 app.use(cors());
-app.use(express.json);
-
-app.post('/makecadastro', (req, res) => {
-
-    const {name} = req.body;
-
-    console.log(name);
-})
-
+app.use(express.json());
 
 app.listen('3001', () => {
-    console.log('rodando na porta 3001')
+    
 });
+
+app.post('/makeUser', (req, res) => {
+
+    const {Nome} = req.body;
+    const {Email} = req.body;
+    const {Senha} = req.body;
+
+    let insertQuery = "INSERT INTO usuario (Nome, Email, Senha) VALUES (?, ?, ?)";
+    db.query(insertQuery, [Nome, Email, Senha], (err, result) => {
+        res.send(result)
+    });
+
+});
+
+
 
 

@@ -1,13 +1,14 @@
 
-import './App.css';
+import './makeUsers.css';
 import { FaUserAlt } from 'react-icons/fa';
 import { MdEmail, MdPassword } from 'react-icons/md';
 import React, { useState } from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 
 
-function App() {
+function SignUpForm() {
 
+  axios.defaults.baseURL = 'http://localhost:3001'
   const [values, setValues] = useState();
 
   const changeValues = (value) => {
@@ -20,11 +21,19 @@ function App() {
   }
 
   const makeSignup = () => {
-    Axios.post("http://localhost:3001/register", {
-      name: values.Nome,
-      email: values.Email,
-      senha: values.Senha,
-    })
+    axios.post(`${axios.defaults.baseURL}/makeUser`, {
+      Nome: values.Nome,
+      Email: values.Email,
+      Senha: values.Senha
+    }).then(
+      (response) => {
+        console.log(response)
+      }
+    ).catch(
+      (error) => {
+        console.log(error.request)
+      }
+    )
   }
 
 
@@ -33,12 +42,13 @@ function App() {
     <div className="Container">
       <div className='form-container'>
         <div className='form-header'>
-          <h1 className='register-title'>Sign up</h1>
+          <h1 className='register-title'>New Here?</h1>
+          <span className='register-description'>Make your account now</span>
         </div>
         <form className='register-form' onSubmit={e => { e.preventDefault(); }}>
           <div className='input-container input-selected'>
             <FaUserAlt className='icon' />
-            <input placeholder='Nome' type='text' name='Nome' className='register-input' id='input1' onChange={changeValues}></input>
+            <input placeholder='Name' type='text' name='Nome' className='register-input' id='input1' onChange={changeValues}></input>
           </div>
           <div className='input-container'>
             <MdEmail className='icon' />
@@ -46,7 +56,7 @@ function App() {
           </div>
           <div className='input-container'>
             <MdPassword className='icon' />
-            <input type='password' name='Senha' className='register-input' placeholder='Senha' onChange={changeValues}></input>
+            <input type='password' name='Senha' className='register-input' placeholder='Password' onChange={changeValues}></input>
           </div>
           <div className='button-container'>
             <button className='register-button' onClick={makeSignup}>SignUp</button>
@@ -57,4 +67,4 @@ function App() {
   );
 }
 
-export default App;
+export default SignUpForm;
