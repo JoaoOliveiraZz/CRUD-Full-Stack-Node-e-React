@@ -31,6 +31,20 @@ app.post('/makeUser', (req, res) => {
 
 });
 
+app.get('/getUsers', (req, res) => {
+
+    let query = 'SELECT * FROM usuario';
+
+    db.query(query, (err, result) => {
+        if(err){
+            console.log(err);
+        }else{
+            res.send(result);
+        }
+    })
+
+})
+
 
 
 
