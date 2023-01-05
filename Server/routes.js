@@ -45,6 +45,19 @@ app.get('/getUsers', (req, res) => {
 
 })
 
+app.post('/edituser', (req, res) => {
+    let {id} = req.body;
+    console.log(id);
+    // let {Nome} = req.body;
+    // let {Email} = req.body;
+    // let {Senha} = req.body;
+
+    // let query = "UPADATE usuario  SET Nome = ?, Email = ?, Senha = ? WHERE id = ?";
+
+    // db.query(query, [Nome, Email, Senha, id], (err, result) => {
+    //     res.send(result);
+    // })
+})
 
 
 

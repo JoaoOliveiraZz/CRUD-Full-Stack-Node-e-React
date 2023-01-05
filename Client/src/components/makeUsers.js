@@ -10,6 +10,7 @@ function SignUpForm() {
 
   axios.defaults.baseURL = 'http://localhost:3001'
   const [values, setValues] = useState();
+  console.log(values)
 
   const changeValues = (value) => {
     setValues((prevValue) => (

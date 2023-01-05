@@ -1,7 +1,8 @@
 import React from "react";
 import axios from 'axios';
 import { useEffect, useState } from "react";
-import './showUsers.css'
+import './showUsers.css';
+import { Link } from "react-router-dom";
 
 function ShowUsers() {
 
@@ -44,7 +45,7 @@ function ShowUsers() {
                                     <td className="table-collumn">{value.Nome}</td>
                                     <td className="table-collumn">{value.Email}</td>
                                     <td className="table-collumn">{value.Senha}</td>
-                                    <td className="table-collumn">Editar</td>
+                                    <td className="table-collumn"><Link to={`../edituser/:${value.id}`}>Editar</Link></td>
                                     <td className="table-collumn">Excluir</td>
                                 </tr>
                             )
