@@ -45,8 +45,8 @@ function ShowUsers() {
                                     <td className="table-collumn">{value.Nome}</td>
                                     <td className="table-collumn">{value.Email}</td>
                                     <td className="table-collumn">{value.Senha}</td>
-                                    <td className="table-collumn"><Link to={`../edituser/:${value.id}`}>Editar</Link></td>
-                                    <td className="table-collumn">Excluir</td>
+                                    <td className="table-collumn"><Link to={`../edituser/:${value.id}/:${value.Nome}/:${value.Email}/:${value.Senha}`}>Editar</Link></td>
+                                    <td className="table-collumn"></td>
                                 </tr>
                             )
                         })

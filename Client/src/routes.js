@@ -9,7 +9,7 @@ function Router(){
         <Routes>
             <Route path='/makeuser' element={ <SignUpForm /> } />
             <Route path='/showusers' element={ <ShowUsers />} />
-            <Route path='/edituser/:id' element={ <EditUser />} />
+            <Route path='/edituser/:id/:Nome/:Email/:Senha' element={ <EditUser />} />
         </Routes>
     )
 
