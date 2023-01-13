@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useEffect, useState } from "react";
 import './showUsers.css';
 import { Link } from "react-router-dom";
+import {FaTrashAlt, FaPencilAlt, FaPen} from 'react-icons/fa';
 
 function ShowUsers() {
 
@@ -21,6 +22,12 @@ function ShowUsers() {
 
     }, [])
 
+    const DeleteUser = (id) => {
+
+        axios.delete(`${axios.defaults.baseURL}/delete/${id}`)
+
+    }
+
     return (
 
         <div className="table-container">
@@ -36,7 +43,7 @@ function ShowUsers() {
                         <td className="table-collumn">Excluir</td>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="users-table-body">
                     {
                         listUsers !== undefined && listUsers.map((value) => {
                             return (
@@ -45,8 +52,8 @@ function ShowUsers() {
                                     <td className="table-collumn">{value.Nome}</td>
                                     <td className="table-collumn">{value.Email}</td>
                                     <td className="table-collumn">{value.Senha}</td>
-                                    <td className="table-collumn"><Link to={`../edituser/:${value.id}/:${value.Nome}/:${value.Email}/:${value.Senha}`}>Editar</Link></td>
-                                    <td className="table-collumn"></td>
+                                    <td className="table-collumn"><Link to={`../edituser/:${value.id}/:${value.Nome}/:${value.Email}/:${value.Senha}`} className='link'><FaPencilAlt /></Link></td>
+                                    <td className="table-collumn"><button className="delete-button" onClick={() => { DeleteUser(value.id) }}><FaTrashAlt className="Icon"/></button></td>
                                 </tr>
                             )
                         })

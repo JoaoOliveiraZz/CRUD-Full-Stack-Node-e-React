@@ -25,3 +25,23 @@
 .users-table .users-table-head .table-row{
     border: 2px solid black;
 }
+
+.users-table .users-table-body .table-row .table-collumn, .users-table .users-table-head .table-row .table-collumn{
+   text-align: center;
+}
+
+.users-table .users-table-body .table-row .table-collumn .Icon{
+   cursor: pointer;
+   height: 100%;
+   width: 100%;
+}
+
+.delete-button{
+    background: none;
+    border: none;
+}
+
+.link{
+    text-decoration: none;
+    color: #000;
+}

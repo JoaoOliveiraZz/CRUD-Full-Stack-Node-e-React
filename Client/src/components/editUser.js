@@ -47,7 +47,7 @@ export default function EditUser() {
     }
 
     const edituser = () => {
-        axios.post(`${axios.defaults.baseURL}/edituser`, {
+        axios.put(`${axios.defaults.baseURL}/edituser`, {
             id: id,
             Nome: values.Nome,
             Email: values.Email,

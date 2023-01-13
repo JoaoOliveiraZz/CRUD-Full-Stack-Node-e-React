@@ -45,7 +45,7 @@ app.get('/getUsers', (req, res) => {
 
 })
 
-app.post('/edituser', (req, res) => {
+app.put('/edituser', (req, res) => {
     let {id} = req.body;
     let {Nome} = req.body;
     let {Email} = req.body;
@@ -58,6 +58,17 @@ app.post('/edituser', (req, res) => {
     console.log(db.query(query, [Nome, Email, Senha, id], (err, result) => {
         res.send(result);
     }))
+})
+
+app.delete('/delete/:id', (req, res) => {
+    const {id} = req.params;
+    
+    let deleteQuery = 'DELETE FROM usuario WHERE id = ?';
+
+    db.query(deleteQuery, [id], (err, response) => {
+        if(err) console.log(err)
+        else res.send(response)
+    })
 })
 
 
