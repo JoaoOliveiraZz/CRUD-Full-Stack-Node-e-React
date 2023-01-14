@@ -10,10 +10,12 @@ export default function HomePage(){
             <h1>CRUD DE USUÁRIOS COM REACT + NODE JS</h1>
             <div className="box-container">
                 <div className="box">
-                    <Link to={'/makeuser'}>Adicionar Usuários</Link>
+                    <Link to={'/makeuser'} className='Link' >Adicionar Usuários</Link>
+                    <span className="border-bottom-animation"></span>
                 </div>
                 <div className="box">
-                    <Link to={'/showusers'} >Visualizar usuários cadastrados</Link>
+                    <Link to={'/showusers'} className='Link' >Visualizar usuários</Link>
+                    <span className="border-bottom-animation"></span>
                 </div>
             </div>
         </div>
