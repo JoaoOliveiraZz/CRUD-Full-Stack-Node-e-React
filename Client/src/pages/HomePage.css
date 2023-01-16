@@ -35,19 +35,9 @@
     font-weight: 800;
     text-transform: uppercase;
     border-bottom: 2px solid #0000;
+    transition: all .5s;
 }
 
 .box .Link:hover{
     border-bottom: 2px solid #000;
-}
-
-.box .border-bottom-animation::before{
-    content: '';
-    width: 0%;
-    background: #000;
-    transition: all .5s;
-}
-
-.box .Link:hover ~ .border-bottom-animation::before{
-    width: 100%;
 }

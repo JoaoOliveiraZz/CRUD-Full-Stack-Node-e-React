@@ -83,7 +83,7 @@
 .Container .form-container .register-form .input-container .register-input {
   position: relative;
   height: 40px;
-  width: 100%;
+  width: 80%;
   border: none;
   padding: 20px;
   outline: none;
@@ -108,6 +108,7 @@
 
 .Container .form-container .register-form .register-button {
   background: none;
+  margin: 5%;
   height: 50px;
   width: 150px;
   border-radius: 20px;
@@ -126,4 +127,9 @@
   transform: scale(1.2);
   font-size: 17px;
 }
+
+.Link{
+  color: #a4a2a2;
+}
+
 

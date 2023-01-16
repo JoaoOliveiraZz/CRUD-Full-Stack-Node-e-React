@@ -4,7 +4,7 @@ import { FaUserAlt } from 'react-icons/fa';
 import { MdEmail, MdPassword } from 'react-icons/md';
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { Link } from 'react-router-dom';
 
 function SignUpForm() {
 
@@ -61,6 +61,7 @@ function SignUpForm() {
           </div>
           <div className='button-container'>
             <button className='register-button' onClick={makeSignup}>SignUp</button>
+            <button className='register-button'><Link className='Link' to={'../'}>Cancelar</Link></button>
           </div>
         </form>
       </div>

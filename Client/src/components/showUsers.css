@@ -45,3 +45,20 @@
     text-decoration: none;
     color: #000;
 }
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.close-icon{
+    height: 100%;
+    width: 35px;
+    transition: all .5s ;
+}
+
+.close-icon:hover{
+    transform: scale(1.3);
+}

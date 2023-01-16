@@ -11,11 +11,10 @@ export default function HomePage(){
             <div className="box-container">
                 <div className="box">
                     <Link to={'/makeuser'} className='Link' >Adicionar Usuários</Link>
-                    <span className="border-bottom-animation"></span>
+                    
                 </div>
                 <div className="box">
                     <Link to={'/showusers'} className='Link' >Visualizar usuários</Link>
-                    <span className="border-bottom-animation"></span>
                 </div>
             </div>
         </div>

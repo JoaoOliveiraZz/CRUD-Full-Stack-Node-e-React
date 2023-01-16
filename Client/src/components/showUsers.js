@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import './showUsers.css';
 import { Link } from "react-router-dom";
 import {FaTrashAlt, FaPencilAlt, FaPen} from 'react-icons/fa';
+import {AiFillCloseCircle} from 'react-icons/ai'
 
 function ShowUsers() {
 
@@ -31,7 +32,10 @@ function ShowUsers() {
     return (
 
         <div className="table-container">
+            <div className="header">
             <h1>Usuários Cadastrados</h1>
+            <Link to={'../'} className='Link' ><AiFillCloseCircle className="close-icon" /></Link> 
+            </div>
             <table className="users-table">
                 <thead className="users-table-head">
                     <tr className="table-row">
