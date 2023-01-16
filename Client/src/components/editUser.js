@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FaUserAlt } from "react-icons/fa";
 import { MdEmail, MdPassword } from "react-icons/md";
 import './makeUsers.css'
-import { Navigate } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 
 
 export default function EditUser() {
@@ -69,8 +69,8 @@ export default function EditUser() {
         <div className="Container">
             <div className='form-container'>
                 <div className='form-header'>
-                    <h1 className='register-title'>Editing accounts?</h1>
-                    <span className='register-description'>Edit a any momment</span>
+                    <h1 className='register-title'>Editing Users?</h1>
+                    <span className='register-description'>Edit accounts here!</span>
                 </div>
                 <form className='register-form' onSubmit={e => { e.preventDefault(); }}>
                     <div className='input-container input-selected'>
@@ -87,6 +87,7 @@ export default function EditUser() {
                     </div>
                     <div className='button-container'>
                         <button className='register-button' onClick={edituser}>Edit</button>
+                        <button className='register-button'><Link className='Link' to={'../'}>Cancelar</Link></button>
                     </div>
                 </form>
             </div>
